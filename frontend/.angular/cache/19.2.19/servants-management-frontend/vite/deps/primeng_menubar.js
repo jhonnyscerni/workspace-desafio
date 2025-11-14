@@ -1,34 +1,29 @@
 import {
-  Tooltip,
-  TooltipModule
-} from "./chunk-6OKGV2BG.js";
-import {
   Badge,
   BadgeModule
 } from "./chunk-53L666IX.js";
 import {
-  zindexutils
-} from "./chunk-NMOYQVAO.js";
+  Tooltip,
+  TooltipModule
+} from "./chunk-6OKGV2BG.js";
 import {
   Ripple
 } from "./chunk-KPT7JZ5I.js";
-import "./chunk-5G7WYC4N.js";
 import {
   AngleDownIcon,
   AngleRightIcon,
   BarsIcon
 } from "./chunk-H5NNZ47O.js";
 import {
+  zindexutils
+} from "./chunk-NMOYQVAO.js";
+import "./chunk-5G7WYC4N.js";
+import {
   BaseComponent
 } from "./chunk-2ZWR4ABI.js";
 import {
   BaseStyle
 } from "./chunk-E3QHHZGR.js";
-import {
-  RouterLink,
-  RouterLinkActive,
-  RouterModule
-} from "./chunk-KC2VJO4B.js";
 import {
   PrimeTemplate,
   SharedModule,
@@ -42,6 +37,11 @@ import {
   resolve,
   uuid
 } from "./chunk-AJPNR3ID.js";
+import {
+  RouterLink,
+  RouterLinkActive,
+  RouterModule
+} from "./chunk-KC2VJO4B.js";
 import "./chunk-2SOVXBZV.js";
 import "./chunk-32ARO7BI.js";
 import "./chunk-6ROKV4B5.js";

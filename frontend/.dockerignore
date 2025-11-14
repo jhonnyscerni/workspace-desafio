@@ -1,0 +1,51 @@
+# Node modules
+node_modules/
+npm-debug.log
+yarn-error.log
+
+# Build output
+dist/
+.angular/
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+.settings/
+.project
+.classpath
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Documentation
+README.md
+README-DOCKER.md
+*.txt
+*.pdf
+
+# Test files
+*.spec.ts
+e2e/
+coverage/
+.nyc_output/
+
+# Environment files (will be built in)
+# src/environments/
+
+# Temporary files
+*.tmp
+*.swp
+*~
+.cache/
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+.travis.yml

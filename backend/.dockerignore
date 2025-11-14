@@ -1,0 +1,45 @@
+# Maven build artifacts
+target/
+!target/*.jar
+
+# Maven wrapper (will be copied explicitly)
+# .mvn/
+# mvnw
+# mvnw.cmd
+
+# IDE files
+.idea/
+.vscode/
+*.iml
+*.iws
+*.ipr
+.settings/
+.project
+.classpath
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Git
+.git/
+.gitignore
+.gitattributes
+
+# Documentation
+README.md
+README-DOCKER.md
+*.txt
+*.pdf
+
+# Logs
+*.log
+logs/
+
+# Test files
+src/test/
+
+# Temporary files
+*.tmp
+*.swp
+*~

@@ -2,34 +2,26 @@ import {
   Button
 } from "./chunk-ZISI7TDG.js";
 import "./chunk-53L666IX.js";
-import "./chunk-BUX7II5R.js";
-import {
-  zindexutils
-} from "./chunk-NMOYQVAO.js";
 import "./chunk-UOJLLXI7.js";
+import "./chunk-BUX7II5R.js";
 import "./chunk-KPT7JZ5I.js";
-import {
-  DomHandler
-} from "./chunk-5G7WYC4N.js";
 import {
   TimesIcon,
   WindowMaximizeIcon,
   WindowMinimizeIcon
 } from "./chunk-H5NNZ47O.js";
 import {
+  zindexutils
+} from "./chunk-NMOYQVAO.js";
+import {
+  DomHandler
+} from "./chunk-5G7WYC4N.js";
+import {
   BaseComponent
 } from "./chunk-2ZWR4ABI.js";
 import {
   BaseStyle
 } from "./chunk-E3QHHZGR.js";
-import {
-  animate,
-  animation,
-  style,
-  transition,
-  trigger,
-  useAnimation
-} from "./chunk-VNDC54BV.js";
 import {
   ConfirmEventType,
   ConfirmationService,
@@ -54,6 +46,14 @@ import {
   unblockBodyScroll,
   uuid
 } from "./chunk-AJPNR3ID.js";
+import {
+  animate,
+  animation,
+  style,
+  transition,
+  trigger,
+  useAnimation
+} from "./chunk-VNDC54BV.js";
 import {
   CommonModule,
   NgClass,

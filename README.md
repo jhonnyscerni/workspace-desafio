@@ -17,10 +17,12 @@ Aplicação CRUD completa que permite:
 - **Java 17**
 - **Spring Boot 2.7.18**
 - **Spring Data JPA**
-- **H2 Database** (em memória)
+- **H2 Database** (desenvolvimento)
+- **PostgreSQL 15** (produção/Docker)
 - **MapStruct 1.5.5**
 - **Lombok**
 - **Maven**
+- **Docker** (containerização)
 
 ### Frontend
 - **Angular 19**
@@ -73,6 +75,52 @@ frontend/
 **Padrão**: Feature-based modules com standalone components
 
 ## 🚀 Como Executar
+
+### Opção 1: Docker (Recomendado) 🐳
+
+**Pré-requisitos:**
+- Docker 20.10+
+- Docker Compose 2.0+
+
+```bash
+# 1. Clone o repositório
+git clone <repository-url>
+cd workspace-desafio
+
+# 2. Inicie com Docker Compose
+docker-compose up --build
+
+# Aguarde ~3-5 minutos para build e inicialização
+```
+
+**Acessos:**
+- Frontend: http://localhost
+- Backend: http://localhost:8080
+- Swagger: http://localhost:8080/swagger-ui.html
+- PostgreSQL: localhost:5432
+
+**Scripts auxiliares:**
+```bash
+# Bash (Linux/Mac/Git Bash)
+./docker-helper.sh start
+
+# PowerShell (Windows)
+.\docker-helper.ps1 start
+```
+
+**Comandos úteis:**
+```bash
+docker-compose up -d          # Start em background
+docker-compose logs -f        # Ver logs
+docker-compose down           # Parar containers
+docker-compose down -v        # Parar e remover volumes
+```
+
+📖 **Documentação completa**: [README-DEPLOY.md](README-DEPLOY.md)
+
+---
+
+### Opção 2: Desenvolvimento Local
 
 ### Pré-requisitos
 - **Java 17+**

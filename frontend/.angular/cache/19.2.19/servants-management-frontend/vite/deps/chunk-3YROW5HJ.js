@@ -13,14 +13,6 @@ import {
   BaseStyle
 } from "./chunk-E3QHHZGR.js";
 import {
-  animate,
-  animation,
-  style,
-  transition,
-  trigger,
-  useAnimation
-} from "./chunk-VNDC54BV.js";
-import {
   OverlayService,
   PrimeTemplate,
   SharedModule,
@@ -30,6 +22,14 @@ import {
   isTouchDevice,
   removeClass
 } from "./chunk-AJPNR3ID.js";
+import {
+  animate,
+  animation,
+  style,
+  transition,
+  trigger,
+  useAnimation
+} from "./chunk-VNDC54BV.js";
 import {
   CommonModule,
   NgClass,
@@ -1056,4 +1056,4 @@ export {
   Overlay,
   OverlayModule
 };
-//# sourceMappingURL=chunk-7N4SKLQD.js.map
+//# sourceMappingURL=chunk-3YROW5HJ.js.map
