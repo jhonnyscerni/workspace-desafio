@@ -260,6 +260,13 @@ npm run build
 - ✅ Cálculo de idade em tempo real
 - ✅ UX profissional com PrimeNG
 
+# Telas (imagens do sistema)
+![swagger.png](images/swagger.png)
+![Tela-Secretarias.png](images/Tela-Secretarias.png)
+![Tela-Secretarias-novo.png](images/Tela-Secretarias-novo.png)
+![Tela-Servidor.png](images/Tela-Servidor.png)
+![Tela-Servidor-novo.png](images/Tela-Servidor-novo.png)
+
 
 ## 📄 Licença
 
