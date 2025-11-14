@@ -1,0 +1,8 @@
+::ng-deep {
+  .p-menubar {
+    border-radius: 0;
+    border: none;
+    border-bottom: 3px solid #007bff;
+    margin-bottom: 0;
+  }
+}

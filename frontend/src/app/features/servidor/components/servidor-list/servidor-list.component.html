@@ -1,0 +1,88 @@
+<div class="page-container">
+  <h1 class="page-title">Servidores Públicos</h1>
+
+  <div class="card">
+    <p-table
+      [value]="servidores"
+      [loading]="loading"
+      [paginator]="true"
+      [rows]="10"
+      [showCurrentPageReport]="true"
+      currentPageReportTemplate="Mostrando {first} a {last} de {totalRecords} registros"
+      [rowsPerPageOptions]="[10, 25, 50]"
+      styleClass="p-datatable-sm">
+
+      <ng-template pTemplate="caption">
+        <div class="flex justify-content-between align-items-center">
+          <div>
+            <button
+              pButton
+              label="Novo Servidor"
+              icon="pi pi-plus"
+              class="p-button-success mr-2"
+              (click)="navigateToCreate()">
+            </button>
+            <a
+              [href]="exportCsvUrl"
+              pButton
+              label="Exportar CSV"
+              icon="pi pi-download"
+              class="p-button-secondary">
+            </a>
+          </div>
+        </div>
+      </ng-template>
+
+      <ng-template pTemplate="header">
+        <tr>
+          <th>ID</th>
+          <th>Nome</th>
+          <th>Email</th>
+          <th>Data Nascimento</th>
+          <th>Idade</th>
+          <th>Secretaria</th>
+          <th>Sigla</th>
+          <th style="width: 150px">Ações</th>
+        </tr>
+      </ng-template>
+
+      <ng-template pTemplate="body" let-servidor>
+        <tr>
+          <td>{{ servidor.id }}</td>
+          <td>{{ servidor.nome }}</td>
+          <td>{{ servidor.email }}</td>
+          <td>{{ servidor.dataNascimento | date: 'dd/MM/yyyy' }}</td>
+          <td><strong>{{ servidor.idade }} anos</strong></td>
+          <td>{{ servidor.secretaria.nome }}</td>
+          <td><strong>{{ servidor.secretaria.sigla }}</strong></td>
+          <td>
+            <button
+              pButton
+              icon="pi pi-pencil"
+              class="p-button-rounded p-button-text p-button-warning"
+              pTooltip="Editar"
+              tooltipPosition="top"
+              (click)="edit(servidor.id)">
+            </button>
+            <button
+              pButton
+              icon="pi pi-trash"
+              class="p-button-rounded p-button-text p-button-danger"
+              pTooltip="Excluir"
+              tooltipPosition="top"
+              (click)="confirmDelete(servidor)">
+            </button>
+          </td>
+        </tr>
+      </ng-template>
+
+      <ng-template pTemplate="emptymessage">
+        <tr>
+          <td colspan="8" class="text-center">Nenhum servidor encontrado</td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+
+  <p-confirmDialog></p-confirmDialog>
+</div>

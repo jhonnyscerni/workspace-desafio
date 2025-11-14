@@ -1,0 +1,98 @@
+<div class="page-container">
+  <h1 class="page-title">{{ isEditMode ? 'Editar' : 'Novo' }} Servidor</h1>
+
+  <div class="card">
+    <form [formGroup]="servidorForm" (ngSubmit)="onSubmit()">
+      <div class="field">
+        <label for="nome">Nome *</label>
+        <input
+          pInputText
+          id="nome"
+          formControlName="nome"
+          class="w-full"
+          [class.ng-invalid]="isFieldInvalid('nome')"
+          placeholder="Ex: João Silva Santos" />
+        <small class="p-error" *ngIf="isFieldInvalid('nome')">
+          {{ getErrorMessage('nome') }}
+        </small>
+      </div>
+
+      <div class="field">
+        <label for="email">Email *</label>
+        <input
+          pInputText
+          id="email"
+          type="email"
+          formControlName="email"
+          class="w-full"
+          [class.ng-invalid]="isFieldInvalid('email')"
+          placeholder="Ex: joao.silva@secretaria.gov.br" />
+        <small class="p-error" *ngIf="isFieldInvalid('email')">
+          {{ getErrorMessage('email') }}
+        </small>
+      </div>
+
+      <div class="field">
+        <label for="dataNascimento">Data de Nascimento *</label>
+        <p-calendar
+          id="dataNascimento"
+          formControlName="dataNascimento"
+          [showIcon]="true"
+          dateFormat="dd/mm/yy"
+          placeholder="Selecione a data"
+          [maxDate]="maxDate"
+          [yearNavigator]="true"
+          [yearRange]="yearRange"
+          styleClass="w-full"
+          [class.ng-invalid]="isFieldInvalid('dataNascimento')">
+        </p-calendar>
+        <small class="p-error" *ngIf="isFieldInvalid('dataNascimento')">
+          {{ getErrorMessage('dataNascimento') }}
+        </small>
+        <small class="block mt-1" style="color: #198754;" *ngIf="calculatedAge !== null && servidorForm.get('dataNascimento')?.valid">
+          <strong>Idade calculada: {{ calculatedAge }} anos</strong>
+        </small>
+      </div>
+
+      <div class="field">
+        <label for="secretaria">Secretaria *</label>
+        <p-dropdown
+          id="secretaria"
+          [options]="secretarias"
+          formControlName="secretariaId"
+          optionLabel="nome"
+          optionValue="id"
+          placeholder="Selecione uma secretaria"
+          styleClass="w-full"
+          [class.ng-invalid]="isFieldInvalid('secretariaId')">
+          <ng-template let-secretaria pTemplate="item">
+            <div>
+              <strong>{{ secretaria.sigla }}</strong> - {{ secretaria.nome }}
+            </div>
+          </ng-template>
+        </p-dropdown>
+        <small class="p-error" *ngIf="isFieldInvalid('secretariaId')">
+          {{ getErrorMessage('secretariaId') }}
+        </small>
+      </div>
+
+      <div class="button-group">
+        <button
+          pButton
+          type="submit"
+          label="{{ isEditMode ? 'Atualizar' : 'Salvar' }}"
+          icon="pi pi-check"
+          [disabled]="servidorForm.invalid || isSubmitting">
+        </button>
+        <button
+          pButton
+          type="button"
+          label="Cancelar"
+          icon="pi pi-times"
+          class="p-button-secondary"
+          (click)="cancel()">
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

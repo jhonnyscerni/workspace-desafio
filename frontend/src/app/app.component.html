@@ -1,0 +1,27 @@
+<!-- Header Menu -->
+<p-menubar [model]="menuItems">
+  <ng-template pTemplate="start">
+    <div style="padding: 0 1rem;">
+      <h3 style="margin: 0; color: #495057;">
+        <i class="pi pi-users" style="margin-right: 0.5rem;"></i>
+        Sistema de Gestão - Servidores Públicos
+      </h3>
+    </div>
+  </ng-template>
+</p-menubar>
+
+<!-- Main Content -->
+<router-outlet></router-outlet>
+
+<!-- Toast Notifications -->
+<p-toast position="top-right"></p-toast>
+
+<!-- Loading Overlay -->
+<div class="loading-overlay" *ngIf="loadingService.loading$ | async">
+  <p-progressSpinner
+    [style]="{ width: '70px', height: '70px' }"
+    strokeWidth="4"
+    fill="transparent"
+    animationDuration="1s">
+  </p-progressSpinner>
+</div>
