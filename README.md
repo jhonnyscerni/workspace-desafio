@@ -2,6 +2,10 @@
 
 Sistema fullstack desenvolvido para gerenciamento de servidores públicos municipais e suas respectivas secretarias.
 
+## Branchs
+- master-deploy (desenvolvimento + docker de deploy e subida)
+- master (desenvolvimento)
+
 ## 📋 Descrição do Projeto
 
 Aplicação CRUD completa que permite:
